@@ -26,7 +26,7 @@
 
 ## Gap ledger (dedupe — READ FIRST, never re-pick)
 - 2026-08-24 issue #421 — outcome dropped(claimed, PR #444 addresses it) — lesson: always check open PRs before re-picking an issue
-- 2026-09-05 self-found gap (config-docs drift: stale COUNTRY lists KE/SA, omit SE) — outcome pr-opened — PR link in this run's log
+- 2026-09-05 self-found gap (config-docs drift: stale COUNTRY lists KE/SA, omit SE) — outcome pr-opened — https://github.com/olitreadwell/mapit/pull/1 (fork CI green)
 
 ## Mined gaps (discovered, not yet attempted)
-- 2026-09-05 config-docs: `conf/general.yml-example:14` and `project/settings.py:32` country comments are stale — they list non-existent country codes KE and SA and omit SE. Authoritative source `mapit/countries/__init__.py` dispatches on GB, NO, IT, SE, ZA (+ external Global). git history: mapit_ke and mapit_sa never existed; mapit_se added c0858cc; mapit_za added 1e422a1 (SA was a mistake for ZA/South Africa). Fix both comments to "GB, NO, IT, SE, or ZA". Verify: flake8 passes; comments-only so no tests affected. Dedupe: no upstream issue/PR references this. status: attempted (2026-09-05)
+- 2026-09-05 config-docs: `conf/general.yml-example:14` and `project/settings.py:32` country comments are stale — they list non-existent country codes KE and SA and omit SE. Authoritative source `mapit/countries/__init__.py` dispatches on GB, NO, IT, SE, ZA (+ external Global). git history: mapit_ke and mapit_sa never existed; mapit_se added c0858cc; mapit_za added 1e422a1 (SA was a mistake for ZA/South Africa). Fix both comments to "GB, NO, IT, SE, or ZA". Verify: flake8 passes; comments-only so no tests affected. Dedupe: no upstream issue/PR references this. status: attempted -> pr-opened (2026-09-05) https://github.com/olitreadwell/mapit/pull/1, fork CI green
