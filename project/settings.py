@@ -29,7 +29,7 @@ MAPIT_WITHIN_MAXIMUM = float(config.get('WITHIN_MAXIMUM', 0))
 if MAPIT_WITHIN_MAXIMUM.is_integer():
     MAPIT_WITHIN_MAXIMUM = int(MAPIT_WITHIN_MAXIMUM)
 
-# Country is currently one of GB, NO, IT, KE, SA, or ZA.
+# Country is currently one of GB, NO, IT, SE, or ZA.
 # Optional; country specific things won't happen if not set.
 MAPIT_COUNTRY = config.get('COUNTRY', '')
 
